@@ -2,10 +2,12 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 input[type="text"] {
-  width: 500px;
+  text-transform: lowercase;
+  width: 100%;
 }
 
 .inputs {
@@ -13,7 +15,7 @@ input[type="text"] {
 }
 
 .nes-container {
-  width: 60vw;
+  width: 100%;
 }
 
 img {

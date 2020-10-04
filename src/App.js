@@ -36,14 +36,13 @@ function App() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-
     if (poke.trim() === "") {
       setError(true);
       return;
     }
     setError(false);
 
-    if (poke === pokemon.name) {
+    if (poke.toLowerCase() === pokemon.name) {
       setGameState(true);
     } else {
       setGameState(false);
