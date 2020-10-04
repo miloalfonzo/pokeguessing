@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
 
 function App() {
@@ -68,21 +68,27 @@ function App() {
             name="poke"
             onChange={onChange}
           />
-          {gamestate ? (
-            <input
-              type="button"
-              className="nes-btn is-warning"
-              value="Jugar otra vez"
-              onClick={refresh}
-            />
-          ) : (
+        </div>
+        {gamestate ? (
+          <input
+            type="button"
+            className="nes-btn is-warning"
+            value="Jugar otra vez"
+            onClick={refresh}
+          />
+        ) : (
+          <Fragment>
             <input
               type="submit"
-              className="nes-btn is-error"
+              className="nes-btn is-error inputs"
               value="Adivinar!"
             />
-          )}
-        </div>
+
+            <a href="/" onClick={refresh} className="">
+              No lo conozco, dame otro Pokemon
+            </a>
+          </Fragment>
+        )}
       </form>
     </div>
   );

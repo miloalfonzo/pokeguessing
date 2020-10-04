@@ -14,7 +14,14 @@ input[type="text"] {
   display: inline-flex;
 }
 
+a {
+  display: block;
+  padding-top: 1.5rem;
+}
+
+
 .nes-container {
+  margin: 2rem;
   width: 100%;
 }
 
