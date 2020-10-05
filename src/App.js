@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const consultApi = async () => {
       let url = `https://pokeapi.co/api/v2/pokemon/${Math.round(
-        Math.random() * (105 - 1) + 1
+        Math.random() * (1005 - 1) + 1
       )}`;
       const result = await axios.get(url);
       setPokemon(result.data);
